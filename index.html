@@ -1,1 +1,328 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Somu ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #ff758c, #ffb6c1, #ffd1dc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.card {
+    width: 100%;
+    max-width: 440px;
+    background: rgba(255,255,255,0.94);
+    border-radius: 28px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(120,0,40,0.2);
+    position: relative;
+    z-index: 2;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.heart {
+    font-size: 65px;
+    animation: beat 1s infinite;
+    margin-bottom: 12px;
+}
+
+@keyframes beat {
+    50% { transform: scale(1.2); }
+}
+
+h1 {
+    color: #d6336c;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+p {
+    color: #654653;
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 14px 0;
+}
+
+.highlight {
+    color: #d6336c;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.yes {
+    background: #e63963;
+    color: white;
+}
+
+.no {
+    background: #fff;
+    color: #d6336c;
+    border: 2px solid #e63963;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+.photo {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 20px 0;
+    border: 4px solid #ffd1dc;
+}
+
+.screen {
+    display: none;
+}
+
+.signature {
+    color: #d6336c;
+    font-style: italic;
+    margin-top: 25px;
+    font-size: 19px;
+}
+
+.floating {
+    position: fixed;
+    bottom: -40px;
+    pointer-events: none;
+    animation: floatUp 8s linear forwards;
+    z-index: 1;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.small {
+    font-size: 14px;
+    color: #956777;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- OPENING SCREEN -->
+
+<div class="card" id="opening">
+
+    <div class="heart">❤️</div>
+
+    <h1>I'm Sorry, Somu!</h1>
+
+    <p>My Dearest Saumya (Akriti),</p>
+
+    <p>
+        I know my behaviour has hurt you,
+        and I am genuinely sorry for that.
+    </p>
+
+    <p>
+        You never deserved the way I behaved.
+        I don't want to make excuses for my mistakes.
+        I just want you to know how much I regret them.
+    </p>
+
+    <p>
+        I know that words cannot erase everything,
+        but I promise to learn from my mistakes
+        and become a better person.
+    </p>
+
+    <p class="highlight">
+        You are special to me, Somu.
+        Your happiness and feelings matter to me.
+    </p>
+
+    <h1 style="font-size:25px; margin-top:25px;">
+        Can You Forgive Me? 🥺
+    </h1>
+
+    <div class="buttons">
+        <button class="yes" onclick="showYes()">
+            YES ❤️
+        </button>
+
+        <button class="no" onclick="showNo()">
+            NO 💔
+        </button>
+    </div>
+
+    <p class="small">
+        Whatever your answer is, I will respect it.
+    </p>
+
+</div>
+
+
+<!-- YES SCREEN -->
+
+<div class="card screen" id="yesScreen">
+
+    <div class="heart">💖</div>
+
+    <h1>You Made Me Smile!</h1>
+
+    <p>My Beautiful Somu ❤️</p>
+
+    <img src="couple.jpg"
+         class="photo"
+         alt="Our beautiful memory together">
+
+    <h1 style="font-size:29px;">
+        Please Be Forever With Me!
+    </h1>
+
+    <p>
+        I don't want a perfect relationship.
+        I want us to keep learning, growing
+        and choosing each other every day.
+    </p>
+
+    <p class="highlight">
+        I Love You So Much, Somu! ❤️
+    </p>
+
+    <p>
+        Let's make many more beautiful memories together.
+    </p>
+
+    <div class="signature">
+        Yours, Always ❤️
+    </div>
+
+</div>
+
+
+<!-- NO SCREEN -->
+
+<div class="card screen" id="noScreen">
+
+    <div class="heart">🥺</div>
+
+    <h1>I'm Still Sorry, Somu!</h1>
+
+    <img src="myphoto.jpg"
+         class="photo"
+         alt="My apology">
+
+    <p>
+        I understand, Somu.
+        I know I made mistakes, and I cannot
+        expect you to forget everything instantly.
+    </p>
+
+    <p>
+        I won't force you to forgive me.
+        Take all the time you need.
+    </p>
+
+    <p class="highlight">
+        I am truly sorry, with all my love. ❤️
+    </p>
+
+    <p>
+        No matter what, I will always be grateful
+        for the beautiful memories we have shared.
+    </p>
+
+    <div class="signature">
+        With Love, Always ❤️
+    </div>
+
+</div>
+
+
+<script>
+
+function showYes() {
+    document.getElementById("opening").style.display = "none";
+    document.getElementById("noScreen").style.display = "none";
+
+    const screen = document.getElementById("yesScreen");
+    screen.style.display = "block";
+
+    window.scrollTo({top: 0, behavior: "smooth"});
+}
+
+function showNo() {
+    document.getElementById("opening").style.display = "none";
+    document.getElementById("yesScreen").style.display = "none";
+
+    const screen = document.getElementById("noScreen");
+    screen.style.display = "block";
+
+    window.scrollTo({top: 0, behavior: "smooth"});
+}
+
+// Floating romantic hearts
+
+function createHeart() {
+    const heart = document.createElement("div");
+
+    heart.className = "floating";
+    heart.innerHTML = ["❤️", "💕", "💗", "💖"][
+        Math.floor(Math.random() * 4)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+}
+
+setInterval(createHeart, 600);
+
+</script>
+
+</body>
+</html>
+
